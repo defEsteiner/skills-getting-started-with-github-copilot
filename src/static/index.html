@@ -44,6 +44,22 @@
     <footer>
       <p>&copy; 2023 Mergington High School</p>
     </footer>
+    <!-- Participants modal (hidden by default) -->
+    <div id="participants-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-overlay" id="modal-overlay"></div>
+      <div class="modal-content">
+        <header class="modal-header">
+          <h3 id="modal-title" class="modal-title">Participants</h3>
+          <button class="modal-close" id="modal-close" aria-label="Close modal">&times;</button>
+        </header>
+        <section class="modal-body" id="modal-body">
+          <!-- Participant list injected here -->
+        </section>
+        <footer class="modal-footer">
+          <button id="modal-close-bottom" class="button">Close</button>
+        </footer>
+      </div>
+    </div>
 
     <script src="app.js"></script>
   </body>
