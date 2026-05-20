@@ -74,6 +74,180 @@ section h3 {
   margin-bottom: 8px;
 }
 
+/* Participants list inside activity cards */
+.participants-container {
+  margin-top: 12px;
+}
+.participants-list,
+.modal-participants-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 8px;
+}
+.participants-list li,
+.modal-participants-list li {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 8px;
+  word-break: break-all;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 12px;
+  background: #fff;
+  border-radius: 6px;
+  border: 1px solid #e6e6e6;
+}
+.participants-list li {
+  background: #f9f9f9;
+}
+.participant-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.delete-participant {
+  background: transparent;
+  border: none;
+  color: #c62828;
+  cursor: pointer;
+  font-size: 16px;
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+}
+.delete-participant:hover {
+  background: rgba(198,40,40,0.1);
+}
+.delete-participant:focus {
+  outline: 2px solid rgba(26,35,126,0.4);
+}
+
+/* More-count button and tooltip */
+.more-wrap {
+  display: inline-block;
+  position: relative;
+  margin-top: 8px;
+}
+.more-count {
+  background: transparent;
+  border: none;
+  color: #1a237e;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 12px;
+}
+.more-count:hover {
+  background-color: rgba(26,35,126,0.08);
+}
+.more-wrap .tooltip {
+  position: absolute;
+  left: 0;
+  top: 110%;
+  z-index: 50;
+  min-width: 180px;
+  max-width: 320px;
+  background: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  padding: 8px 10px;
+  font-size: 13px;
+  color: #222;
+  border-radius: 6px;
+  display: none;
+  white-space: normal;
+}
+.more-wrap:hover .tooltip {
+  display: block;
+}
+
+/* Modal styles */
+.modal.hidden {
+  display: none;
+}
+.modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+}
+.modal-content {
+  position: relative;
+  background: white;
+  width: 90%;
+  max-width: 640px;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  z-index: 1010;
+  overflow: hidden;
+}
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: #1a237e;
+  color: white;
+}
+.modal-title {
+  margin: 0;
+  font-size: 18px;
+}
+.modal-close {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+}
+.modal-body {
+  max-height: 60vh;
+  overflow: auto;
+  padding: 18px 20px;
+  background: #fff;
+}
+.modal-participants-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.participant-item {
+  padding: 10px 12px;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 15px;
+  color: #333;
+}
+.modal-footer {
+  padding: 12px 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  background: #fafafa;
+}
+.button {
+  background: #1a237e;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+
 .form-group {
   margin-bottom: 15px;
 }
